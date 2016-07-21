@@ -1,0 +1,1492 @@
+
+function drawAllianceNetwork(){
+	var objMessagesBackup = { 
+		messages:[
+		  {
+				id: "1",
+				sender: "Mariano Pimentel",
+				data: "28/06/2011-00:17",
+				content: "BSI, tô curioso... o que vocês mudariam nas disciplinas do 1o período? E se as disciplinas do 1o período apoiassem a turma a desenvolver um jogo (aprendizagem baseada em projeto)?",
+				topic:[],
+				position: "",
+				addressee: ""
+			},
+			{
+				id: "2",
+				sender: "Leonardo Marinho",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{
+				id: "3",
+				sender: "Arlindo Pereira",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "disagree",
+				addressee: "1"
+			},
+			{ 
+				id: "4",
+				sender: "Victor Azevedo",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "5",
+				sender: "Luiz Cunha",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "6",
+				sender: "Caroline Delavalli",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "7",
+				sender: "Roberta Santos",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "8",
+				sender: "Felipe Tavares",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "9",
+				sender: "Marcos Barroso",
+				data: "28/06/2011-00:17",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "10",
+				sender: "Alessandro Iglesias",
+				data: "28/06/2011-00:22",
+				content: "Gostei da idéia.",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "11",
+				sender: "Rafael Melo",
+				data: "28/06/2011-00:26",
+				content: "Jogo será sempre um titulo que envolveria os alunos. Nao sei como estah o numero de desistentes do bsi nos primeiros periodos, mas as materias nao ajudam. Na PUC a minha amiga meteu a mao na massa em organizacao de computadores no 1 periodo. Nós nao saimos de um livro super xato. Sou do 7 periodo. Apoio mto ideias assim. Eu curtiria ter meu 1 periodo com experiencia em trabalho em equipe.. O mercado de trabalho esta ai...",
+				topic:[],
+				position: "agree",
+				addressee: "1"
+			},
+			{ 
+				id: "12",
+				sender: "Alessandro Iglesias",
+				data: "28/06/2011-00:28",
+				content: "Acredito que haverá desistências significativas no primeiro período; sou dele. Muito por dificuldades pessoais, e também por não terem noção de como é o curso. Uma proposta desse tipo é interessante não somente aos alunos, mas também a todos, em relação a evasão e desperdício de vagas.",
+				topic:[],
+				position: "agree",
+				addressee: "11"
+			},
+			{ 
+				id: "13",
+				sender: "Alessandro Iglesias",
+				data: "28/06/2011-00:29",
+				content: "Pimentel Mariano, tem noção de quais tipos de jogos seriam viáveis?",
+				topic:[],
+				position: "neutral",					
+				addressee: "1"
+			},
+			{ 
+				id: "14",
+				sender: "Arlindo Pereira",
+				data: "28/06/2011-01:38",
+				content: "Eu mudaria Técnicas de Programação 1 para um aprendizado baseado em dojo e testes unitários.",
+				topic:[],
+				position: "neutral",					
+				addressee: "1"					
+			},					
+			{ 
+				id: "15",
+				sender: "Mariano Pimentel",
+				data: "28/06/2011-01:54",
+				content: "Alessandro Iglesias, acho que um jogo simples como \"pac man\" seria um projeto viável para o 1o período. Neste caso, em vez de disciplinas teríamos \"tópicos\" de estudo para apoiar a realização do projeto. Alguns tópicos seriam: animação, jogabilidade,programação, interatividade e usabilidade em jogos, periféricos etc... Na perspectiva dos professores, seria uma mudança enorme: deixar de ensinar conteúdos disciplinares e passar a apoiar o desenvolvimento de um projeto; a matriz curricular teria que ser modificada, e não sei se os conselhos superiores aprovariam. Mas a minha consulta à comunidade é para levantar a opinião dos alunos, o que vcs acham dessa abordagem? Seria viável? Os alunos gostariam? Seria perda de tempo (estamos falando de 1 semestre inteiro!)? Você teria gostado de desenvolver um jogo no 1o período?",
+				topic:[],
+				position: "neutral",
+				addressee: "13"
+			},
+			{ 
+				id: "16",
+				sender: "Luiz Carlos",
+				data: "28/06/2011-01:54",
+				content: "Like",
+				topic:[],
+				position: "agree",
+				addressee: "15"
+			},
+			{ 
+				id: "17",
+				sender: "Alessandro Iglesias",
+				data: "28/06/2011-02:00",
+				content: "Eu não saberia como inserir isso na grade do primeiro período; mas se houvesse como, seria ótimo. Um passo além de ver apenas os códigos compilarem; acho que daria um bom ânimo à turma.",
+				topic:[],
+				position: "agree",					
+				addressee: "1"
+			},
+			{ 
+				id: "18",
+				sender: "Alessandro Iglesias",
+				data: "28/06/2011-02:00",
+				content: "Ah; chamei mais alunos do primeiro período para este debate.",
+				topic:[],
+				position: "neutral",					
+				addressee: ""
+			},
+			{ 
+				id: "19",
+				sender: "Luiz Cunha",
+				data: "28/06/2011-02:26",
+				content: "Seria interessante se fosse feito como projeto de fim de período, ja conhecemos um pouco do curso ,dos professores e dos próprios alunos, seria uma forma de integrar a turma e também de aprendizado",
+				topic:[],
+				position: "",					
+				addressee: ""
+			},
+			{ 
+				id: "20",
+				sender: "Victor Azevedo",
+				data: "28/06/2011-03:05",
+				content: 'Creio que a proposta seria muito bem aceita pelos alunos. Qualquer coisa que dê mais "realidade" ao conhecimento adquirido realça a vontade de aprender. Por exemplo, pseudo-código me dava sono, até que começamos a programar e ver o programa funcionar.',
+				topic:[],
+				position: "agree",					
+				addressee: "13"
+			},
+			{ 
+				id: "21",
+				sender: "Victor Azevedo",
+				data: "28/06/2011-03:15",
+				content: 'Só não sei se seria ideal essa substituição. Talvez se fosse um complemento ou um projeto de fim de período como disse o Luiz, poderia ser mais viável, não? Mudanças radicais como essa não são facilmente aceitas, creio eu.',
+				topic:[],
+				position: "agree",					
+				addressee: "19"
+			},
+			{ 
+				id: "22",
+				sender: "Leonardo Marinho",
+				data: "28/06/2011-03:18",
+				content: 'Apoio a ideia. Realmente o grande problema dos primeiros períodos é não ver aplicação para boa parte do que nos ensinam (com exceção, claro de programação e dpw). A galera que entra em BSI, exceto os perdidos, que caem no curso de paraquedas, já possui afinidade com games e tecnologia, então seria uma injeção de ânimo pensar "Caramba, já no primeiro período eu vou conseguir fazer um jogo". Só temos que tomar cuidado pra não acabar focando SOMENTE no jogo. Porque ai vira graduação em Jogos Digitais. E daí já é outro curso. Outro ponto interessante é que essa mudança incentivaria o mercado nacional de games, que está engatinhando, mas já possui alguns representantes bem competentes.',
+				topic:[],
+				position: "agree",					
+				addressee: "19"
+			},
+			{ 
+				id: "23",
+				sender: "Mariano Pimentel",
+				data: "28/06/2011-03:18",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "22"
+			},
+			{ 
+				id: "24",
+				sender: "Leonardo Marinho",
+				data: "28/06/2011-03:18",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "22"
+			},
+			{ 
+				id: "25",
+				sender: "Leonardo Marinho",
+				data: "28/06/2011-03:35",
+				content: 'Se quiser mais informações tente entrar em contato com o Professor Esteban Clua, da UFF. Ele é um dos grandes nomes no ensino de games no país. Já tendo organizado por aqui inclusive o Global Game Jam, uma maratona internacional onde os participantes desenvolvem um jogo em apenas 48 horas, além de ser um dos fundadores do SBGames, o simpósio anual de desenvolvedores de games, e por aí vai. Enfim, é o cara. Hehehe',
+				topic:[],
+				position: "neutral",					
+				addressee: ""
+			},
+			{ 
+				id: "26",
+				sender: "Mariano Pimentel",
+				data: "28/06/2011-03:35",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "25"
+			},
+			{ 
+				id: "27",
+				sender: "Honolulu Honshu",
+				data: "28/06/2011-03:35",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "25"
+			},
+			{ 
+				id: "28",
+				sender: "Luiz Carlos",
+				data: "28/06/2011-08:56",
+				content: 'Acho que para esse projeto seja viável teria que ser feito em duas matérias. Em TP1 e em uma outra. Assim haveria carga horária suficiente para dar todos os assuntos necessários e o aluno não ficaria tão traumatizado com C++. Eu sei a grade curricular mudou, no meu caso eu vi ponteiro só em TP2. Mas mesmo assim há muito a ser feito para tornar as disciplinas mas atraentes e mais modernas.',
+				topic:[],
+				position: "neutral",					
+				addressee: ""
+			},
+			{ 
+				id: "29",
+				sender: "Mariano Pimentel",
+				data: "28/06/2011-08:56",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "28"
+			},
+			{ 
+				id: "30",
+				sender: "Caroline Delavalli",
+				data: "28/06/2011-11:17",
+				content: 'sem comentarios mirabolantes, como dos amigos, eu ADOREI A IDEIA! eu ia adorar ter feito um jogo, apesar de nao ser fiel escudeira da programação... Hehehe',
+				topic:[],
+				position: "agree",					
+				addressee: "1"
+			},
+			{ 
+				id: "31",
+				sender: "Vinicius Martins",
+				data: "28/06/2011-11:18",
+				content: 'eu faria o primeiro periodo de novo como ouvinte..',
+				topic:[],
+				position: "agree",					
+				addressee: "1"
+			},
+			{ 
+				id: "32",
+				sender: "Arlindo Pereira",
+				data: "28/06/2011-11:18",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "31"
+			},
+			{ 
+				id: "33",
+				sender: "Caroline Delavalli",
+				data: "28/06/2011-11:18",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "31"
+			},
+			{ 
+				id: "34",
+				sender: "Caroline Delavalli",
+				data: "28/06/2011-11:19",
+				content: 'eu tambeeeem!',
+				topic:[],
+				position: "agree",					
+				addressee: "31"
+			},
+			{ 
+				id: "35",
+				sender: "Hiran Azevedo",
+				data: "28/06/2011-11:27",
+				content: 'faço d novo tb!!!',
+				topic:[],
+				position: "agree",					
+				addressee: "31"
+			},
+			{ 
+				id: "36",
+				sender: "Caroline Delavalli",
+				data: "28/06/2011-11:27",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "35"
+			},
+			{ 
+				id: "37",
+				sender: "Pedro Jardim",
+				data: "28/06/2011-11:34",
+				content: 'Acho a iniciativa muito interessante. Nesse semestre em TP2 os alunos tiveram como trabalho criar jogos em C++, e todos os jogos ficaram excelentes. E isso em meio a estudar para provas de calculo, álgebra linear, etc. Mas se esse trabalho tivesse sido aplicado em TP1 acho que os resultados não teriam sido tão elevados, pois muitos dos alunos que entram em SI não entram sabendo programar, e nem todo mundo entra com o foco de ser programador de jogos. Minha idéia seria criar a partir do segundo período um projeto a parte, com voluntários, para a criação de jogos.',
+				topic:[],
+				position: "agree",					
+				addressee: "1"
+			},
+			{ 
+				id: "38",
+				sender: "Mariano Pimentel",
+				data: "28/06/2011-11:34",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "39",
+				sender: "Eduardo Leite",
+				data: "28/06/2011-11:34",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "40",
+				sender: "Rodrigo Ramos",
+				data: "28/06/2011-11:34",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "41",
+				sender: "Honolulu Honshu",
+				data: "28/06/2011-11:34",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "42",
+				sender: "Gustavo Pinto",
+				data: "28/06/2011-11:37",
+				content: 'concordo!!!!',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "43",
+				sender: "Eduardo Leite",
+				data: "28/06/2011-11:37",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "42"
+			},
+			{ 
+				id: "44",
+				sender: "Uriel Bertoche",
+				data: "28/06/2011-11:59",
+				content: 'e acabassem com materias um tanto quanto inuteis como tecnicas e praticas discursivas, seria otimo!',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "45",
+				sender: "Rodrigo Ramos",
+				data: "28/06/2011-11:59",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "44"
+			},
+			{ 
+				id: "46",
+				sender: "Carlos Magno",
+				data: "28/06/2011-12:11",
+				content: 'Pessoal pode até achar TPD uma matéria "inútil", porém ao meu ver são os próprios alunos que deixam essa imagem. É claro que o bom uso do português é MUITO importante em qualquer área academica. Não vejo porque retirar a matéria . Talvez fosse interessante diminuir a carga horária e mudar um pouco a forma como a mesma é abordada.',
+				topic:[],
+				position: "disagree",					
+				addressee: "44"
+			},
+			{ 
+				id: "47",
+				sender: "Beatriz Goulart",
+				data: "28/06/2011-13:32",
+				content: 'Adorei a ideia!=)',
+				topic:[],
+				position: "agree",					
+				addressee: "37"
+			},
+			{ 
+				id: "48",
+				sender: "Uriel Bertoche",
+				data: "28/06/2011-13:57",
+				content: 'fala sinceramente, o que voce aprendeu em TPD??',
+				topic:[],
+				position: "neutral",					
+				addressee: "44"
+			},
+			{ 
+				id: "49",
+				sender: "Carlos Magno",
+				data: "28/06/2011-14:00",
+				content: 'Eu não "aprendi" nada , até porque tive a sorte de ter um ótimo Ensino Médio e sempre gostei de português. Mas, infelizmente, vemos algumas pessoas que não gostam e acabam deixando isso de lado. Como eu disse, acho que o modo como a matéria é abordada que deveria ser modificado.',
+				topic:[],
+				position: "neutral",					
+				addressee: "48"
+			},
+			{ 
+				id: "50",
+				sender: "Honolulu Honshu",
+				data: "28/06/2011-14:00",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "49"
+			},
+			{ 
+				id: "51",
+				sender: "Victor Azevedo",
+				data: "28/06/2011-14:00",
+				content: 'Like',
+				topic:[],
+				position: "agree",					
+				addressee: "49"
+			},
+			{ 
+				id: "52",
+				sender: "Uriel Bertoche",
+				data: "28/06/2011-14:08",
+				content: 'meu ponto é, você aprende a escrever em vários outros lugares, livros, revistas, jornais, etc. Mas não com um professor tentando te ensinar por um período. Isso se o professor desse a matéria direito, pelo o que ela deveria ser, ao invés de tentar te ensinar as novas regras do português... Fala sério...',
+				topic:[],
+				position: "disagree",					
+				addressee: "49"
+			},
+			{ 
+				id: "53",
+				sender: "Hiran Azevedo",
+				data: "28/06/2011-14:09",
+				content: 'bsi-alunos no facebook... vamos fazer um app pra discusões inuteis igaul da lista??',
+				topic:[],
+				position: "neutral",					
+				addressee: ""
+			},
+			{ 
+				id: "54",
+				sender: "Carlos Magno",
+				data: "28/06/2011-14:10",
+				content: 'Ninguem disse que TPD serve para "aprender a escrever". Você aprende a se comunicar e expressar suas ideias , a elaborar textos discursivos, argumentativos. Só acho que a abordagem da matéria ainda não está boa, contudo mantenho minha opinião de que ela é de suma importância. (Em qualquer meio acadêmico).',
+				topic:[],
+				position: "disagree",					
+				addressee: "52"
+			},
+			{ 
+				id: "55",
+				sender: "Uriel Bertoche",
+				data: "28/06/2011-14:11",
+				content: '‎"Você aprende a se comunicar e expressar suas ideias , a elaborar textos discursivos, argumentativos." Traduzindo, você aprende a escrever :)',
+				topic:[],
+				position: "disagree",					
+				addressee: "54"
+			},
+			{ 
+				id: "56",
+				sender: "Uriel Bertoche",
+				data: "28/06/2011-14:12",
+				content: '‎hahaha seria uma boa hiran! :p',
+				topic:[],
+				position: "agree",					
+				addressee: "53"
+			},
+			{ 
+				id: "57",
+				sender: "Carlos Magno",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "agree",					
+				addressee: "1"
+			},
+			{ 
+				id: "58",
+				sender: "Carlos Magno",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "agree",					
+				addressee: "51"
+			},
+			{ 
+				id: "59",
+				sender: "José",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "neutral",					
+				addressee: ""
+			},
+			{ 
+				id: "60",
+				sender: "Joaquim",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "agree",					
+				addressee: "59"
+			},
+			{ 
+				id: "61",
+				sender: "Carlos Magno",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "disagree",					
+				addressee: "60"
+			},
+			{ 
+				id: "62",
+				sender: "Joana",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "disagree",					
+				addressee: "59"
+			},
+			{ 
+				id: "63",
+				sender: "Renata",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "disagree",					
+				addressee: "59"
+			},
+			{ 
+				id: "64",
+				sender: "Rodrigo João",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "agree",					
+				addressee: "59"
+			},
+			{ 
+				id: "65",
+				sender: "João",
+				data: "28/06/2011-14:12",
+				content: '‎Bem , não vou alongar a discussão. Cada um tem sua opinião e respeito isso. Quanto à ideia do professor Pimentel , acho válido, porem muita coisa seria modificada . Para os alunos é uma boa.',
+				topic:[],
+				position: "agree",					
+				addressee: "64"
+			}
+  		]
+	};
+
+	var discussionFromTextBox = getDiscussionFromTextBox();
+
+	var objMessages = new ObjMessages(discussionFromTextBox);
+
+	function ObjMessages(discussionsMessages){
+		this.messages = discussionsMessages;
+	}
+
+	console.log(objMessages);
+	var lastNodes = [];	
+	
+	var allMessages = objMessages.messages;	
+	for(var l = 0 ; l < allMessages.length ; l++){
+		allMessages[l].value = 0;
+		if (allMessages[l].addressee != ''){
+			for(var m = 0 ; m < allMessages.length ; m++){
+				if (allMessages[l].addressee == allMessages[m].id){
+					allMessages[l].addressee = allMessages[m].sender;
+				}
+			}
+		}
+	}
+	var svg = d3.select(".visualisation").append("svg:svg");
+	var w = $('.visualisation').width();
+	var h = $('.visualisation').height();
+	
+	function draw(messages){
+		var participants = [];
+		var nodes = {};
+		var groups = [];
+		var links = [];
+		$('svg').remove();
+		
+		function link(message){
+			this.id
+			this.source = message.sender;
+			this.target = message.addressee;
+			this.messages = [message];
+			this.value = calculateValue(this.messages);
+			this.addMessage = addMessage;
+			this.calculateValue = calculateValue;
+			this.autoLink = false;
+			
+			function addMessage(message){			
+				this.messages.push(message);
+			}
+			function calculateValue(messages){
+				var valueAgree = 0;
+				var valueDisagree = 0;
+				for(var i = 0 ; i < messages.length ; i++){
+					if(messages[i].position == "agree"){
+						valueAgree = valueAgree + 1;
+					}
+					if(messages[i].position == "disagree"){
+						valueDisagree = valueDisagree + 1;
+					}
+				}
+				var valuesSum = valueAgree + valueDisagree;
+				var value = ((valueAgree * 100) / (valuesSum));
+				
+				if (isNaN(value)){
+					value = 50;
+				}
+				return value;
+			}
+		}
+		
+		for(var i = 0 ; i < messages.length; i++){
+			if(findMessage(messages[i]) == null){
+				updateLink(messages[i]);
+			}
+		}
+		
+		function findMessage(message){
+			for(var i = 0 ; i < links.length ; i++){
+				if(links[i].messages.length != 0){
+					for(var j = 0 ; j < links[i].messages.length; j++){
+						if(message == links[i].messages[j]){
+							return message;
+						}
+					}
+				}
+			}
+			return null;
+		}
+		
+		function updateLink(message){
+			var newLink = new link(message);
+			var linkFound = findLink(newLink,message);
+			if(linkFound != null){
+				linkFound.addMessage(message);
+				linkFound.value = linkFound.calculateValue(linkFound.messages);
+			} else {
+				if(newLink.target == newLink.addresse){
+					newLink.autoLink = true;
+					links.push(newLink);
+				} else if(newLink.target == ""){
+					newLink.autoLink = false;
+					newLink.target = newLink.source;
+					links.push(newLink);
+				} else {
+					links.push(newLink);
+				}
+			}
+		}
+		
+		function findLink(link,message){
+			for(var i = 0 ; i < links.length ; i++){
+				if(((link.target == links[i].target) && (link.source == links[i].source)) || ((link.target == links[i].source) && (link.source == links[i].target))){
+					return links[i];
+				}
+			}
+			return null;
+		}
+		
+		// Compute the distinct nodes from the links.
+		links.forEach(function(link) {
+				link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+				link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});				
+		});
+		
+		var nodeCount = 0;
+		// Store each link on node.
+		$.each(nodes, function(key, value) {				
+				value.index = nodeCount;
+				value.links = [];
+			links.forEach(function(link) {
+				if((link.source.name == value.name)){
+					value.links.push(link);
+				}
+			});
+			nodeCount++;
+		});
+		computePositionalWeight();
+				
+		function computePositionalWeight(){
+			var count = 0;
+			$.each(nodes, function(key, value) {
+				if(count > 0){
+					var lastNodeSnap = nodeExists(key);
+				}
+				if((count > 0) && (lastNodeSnap != null)){
+					value.x = lastNodeSnap.x;
+					value.y = lastNodeSnap.y;
+					count++;
+				} else {
+					var xModifier = count;
+					var yModifier = count;
+													
+					if(Math.random() < 0.5){
+						xModifier = xModifier * (-1);
+					}
+					if(Math.random() < 0.5){
+						yModifier = yModifier * (-1);
+					}				
+					
+					value.x = (w/2)+xModifier;
+					value.y = (h/2)+yModifier;								
+					
+					count++;
+				}
+			var positionalWeight = 0;		
+				for (var j = 0 ; j < links.length ; j++){
+					if(key == links[j].target.name){				
+						positionalWeight = positionalWeight + links[j].value;
+						value.positionalWeight = positionalWeight;						
+					}
+				}
+			});
+		}
+		
+		function nodeExists(name){
+			/*for (var i = 0 ; i < lastNodes.length ; i++){
+				if(index == lastNodes[i].index){
+					return lastNodes[i];
+				} else {
+					return null;
+				}
+			}*/
+			var object = null;
+			$.each(lastNodes, function(lastKey, lastValue) {
+				if(name == lastKey){
+					object = lastValue;
+				}
+			});
+			return object;
+		}
+			
+		function Group(id){
+			this.id = id;
+			this.nodes = [];
+			this.links = [];
+			this.color = "#ccc";
+			
+			this.addNode = function(node) {
+			this.nodes.push(node);
+			}
+			this.addLink = function(link) {
+			this.links.push(node);
+			}
+			this.removeNode = function(node) {
+				for(var i = 0 ; i < nodes ; i++){
+					if(node.id == nodes[i].id){
+						nodes.splice(i,1);
+					}
+				}
+			}
+		}		
+		
+		createGroups();
+		function createGroups(){
+			var contador = 0;
+			$.each(nodes, function(key, value) {
+				var group = new Group(contador);
+				group.addNode(value);
+				groups.push(group);
+				value.group = group;
+				contador++;
+			});
+		}
+		
+		updateGroups();
+		function updateGroups(){
+			$.each(nodes, function(key, value) {
+				var nodeGroups = [];
+				var nodeLinks = value.links;
+				var groupCoefficient = 50;		
+				for (var j = 0 ; j < nodeLinks.length ; j++){
+					if(j==0){
+						var powerfulLink = nodeLinks[j];
+					}
+					if((powerfulLink.value == nodeLinks[j].value) && (powerfulLink.target.group.id != nodeLinks[j].target.group.id) && (powerfulLink.value > groupCoefficient)){
+						value.group.removeNode(value);
+						var group = new Group("bridge");
+						group.addNode(value);
+						groups.push(group);
+						value.group = group;
+					} else {
+						if((powerfulLink.value < nodeLinks[j].value) && (nodeLinks[j].value > groupCoefficient)){
+							powerfulLink = nodeLinks[j];
+							value.group.removeNode(value);
+							value.group = nodeLinks[j].target.group;
+							value.group.addNode(value);
+						} else {
+							if((powerfulLink.value > groupCoefficient)){
+								value.group.removeNode(value);
+								value.group = powerfulLink.target.group;
+								value.group.addNode(value);
+							}
+						}
+					}
+				}					
+			});		
+		}
+		
+		updateGroups();		
+		sortGroupsColors();
+				
+		function sortGroupsColors(){
+			populateParticipants();
+			for(var i = 0 ; i < groups.length ; i++){
+
+				if(groups[i].id == "bridge"){
+					groups[i].colorUnselected = ("#"+"FECC80");
+					groups[i].colorSelected = ("#"+"FF9900");				
+				} else {
+					//var resultUnselected = randomColors(groups.length, false);
+					//var hexUnselected = rgbToHex(resultUnselected[i].r, resultUnselected[i].g, resultUnselected[i].b);				
+					groups[i].colorUnselected = ("#"+"83FE87");
+					
+					//var resultSelected = randomColors(groups.length, true);
+					//var hexSelected = rgbToHex(resultSelected[i].r, resultSelected[i].g, resultSelected[i].b);				
+					groups[i].colorSelected = ("#"+"024304");				
+				}
+			}
+		}
+		
+		function populateParticipants(){
+			for(var i = 0 ; i < allMessages.length ; i++){
+				var found = findParticipants(allMessages[i]);
+				if(!found){
+					participants.push(allMessages[i].sender);
+				}
+			}
+		}		
+		function findParticipants(message){			
+			for(var j = 0 ; j < participants.length ; j++){
+				if(message.sender == participants[j]){
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		function rgbToHex(R,G,B) {
+			return toHex(R)+toHex(G)+toHex(B);
+		}
+		
+		function toHex(n) {
+			 n = parseInt(n,10);
+			 if (isNaN(n)) return "00";
+			 n = Math.max(0,Math.min(n,255));
+			 return "0123456789ABCDEF".charAt((n-n%16)/16)
+			      + "0123456789ABCDEF".charAt(n%16);
+		}
+		function randomColors(total, isSelected)
+		{
+			if(isSelected){
+				var i = 360 / (total - 1); // distribute the colors evenly on the hue range
+			    var r = []; // hold the generated colors
+			    for (var x=0; x<total; x++)
+			    {
+			        r.push(ColorConverter.toRGB(new HSV(i * x, 100, 60))); // you can also alternate the saturation and value for even more contrast between the colors
+			    }
+			    return r;
+			} else {
+				var i = 360 / (total - 1); // distribute the colors evenly on the hue range
+			    var r = []; // hold the generated colors
+			    for (var x=0; x<total; x++)
+			    {
+			        r.push(ColorConverter.toRGB(new HSV(i * x, 60, 100))); // you can also alternate the saturation and value for even more contrast between the colors
+			    }
+			    return r;
+			}
+		    
+		}
+		
+		
+		var force = d3.layout.force()
+		    .nodes(d3.values(nodes))
+		    .links(links)
+		    .size([w, h])
+		    .gravity(0)
+		    .linkDistance(function(d) {
+		    	var distance = 400;
+		    			    		
+	    		distance = distance - (4*d.value);
+		    		if(distance < 50){
+		    			return 50;
+		    		}
+	    		return distance;
+		    })
+		    .charge(-200)
+		    .on("tick", tick)
+		    .start();		    
+		
+		var svg = d3.select(".visualisation").append("svg:svg")
+		    .attr("width", w)
+		    .attr("height", h);	
+			    
+		    function getRadius(positionalWeight){
+		    	
+		    		var r = 6;
+			    	if(positionalWeight != null){
+			    		r = r + (2*positionalWeight);
+			    	}
+			    	if(r < 2){
+			    		r = 2;
+			    	}
+			    	return r;
+		    }
+		    
+		// Per-type markers, as they don't inherit styles.
+		/*svg.append("svg:defs").selectAll("marker")
+		    .data(["neutral", "agree", "disagree"])
+		  .enter().append("svg:marker")
+		    .attr("id", String)
+		    .attr("viewBox", "0 -5 10 10")
+		    .attr("refX", 10)
+		    .attr("refY", -1.5)
+		    .attr("markerWidth", 6)
+		    .attr("markerHeight", 6)
+		    .attr("orient", "auto")
+		  .append("svg:path")
+		    .attr("d", "M0,-5L10,0L0,5");*/
+		
+		var path = svg.append("svg:g").selectAll("line")
+		    .data(force.links())
+		  .enter().append("svg:line")
+		    .attr("class", function(d) {
+		    	var position = generalPosition(d);
+		    	return "link " + position; })
+		    .style("stroke-width","1" /*function(d) {
+		    	if(d.value == 50){
+		    		return 1;
+		    	}
+		    	if(d.value < 50){
+		    		return Math.sqrt((100-(d.value))/20);
+		    	}
+		    	return Math.sqrt(d.value/20); 
+		    	}*/)
+		    .style("stroke", function(d) {
+		    	
+		    	var totalNeutral = 0;
+		    	var totalAgree = 0;
+		    	var totalDisagree = 0;
+		    	var total = d.messages.length;
+
+		    	for(var i = 0 ; i < d.messages.length ; i++){
+		    		if(d.messages[i].position == "neutral"){
+		    			totalNeutral++;
+		    		}
+		    		if(d.messages[i].position == "agree"){
+		    			totalAgree++;
+		    		}
+		    		if(d.messages[i].position == "disagree"){
+		    			totalDisagree++;
+		    		}
+		    	}
+
+		    	var r = calculateLinkRedValue(total, totalDisagree, totalNeutral, d);
+		    	var g = calculateLinkGreenValue(total, totalAgree, totalNeutral, d);
+		    	var b = calculateLinkBlueValue(total, totalNeutral, d);
+
+		    	return rgbToHex(r,g,b); 
+		    	})
+		    .attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
+	    	/*.attr("marker-end", function(d) {
+	    		var position = "neutral";
+	    		
+		    	if(d.value < 0){
+		    		position = "disagree";
+		    	}
+		    	
+		    	if(d.value > 0){
+		    		position = "agree";
+		    	}
+		    	
+	    		return "url(#" + position + ")"; 
+	    	})*/;
+
+		//
+
+		function calculateLinkRedValue(total, totalDisagree, totalNeutral, d){
+			var r = ((totalDisagree+totalNeutral/3) / total) * 200;
+			rT = calculateTransparency(r, d);
+			return rT;
+		}
+
+    	function calculateLinkGreenValue(total, totalAgree, totalNeutral, d){
+    		var g = ((totalAgree+totalNeutral/3) / total) *200;
+    		gT = calculateTransparency(g, d);
+    		return gT;
+    	}
+
+    	function calculateLinkBlueValue(total, totalNeutral, d){
+    		var b = ((totalNeutral/3) / total) * 200;
+    		bT = calculateTransparency(b, d);
+    		return bT;
+    	}
+
+    	function calculateTransparency(color, d){
+    		var strongerRelation = findStrongerRelation();
+    		var percentR = 0.2 + (((d.messages.length) / (strongerRelation)) * (0.8));
+    		return 255 - (percentR * (255 - color));
+    	}
+
+    	function findStrongerRelation(){
+    		var strongerRelation = 0;
+    		var linkStrong;
+    		for(var i = 0 ; i < links.length ; i++){
+    			 if(links[i].messages.length > strongerRelation){
+    			 	strongerRelation = links[i].messages.length;
+    			 	linkStrong = links[i];
+    			 }
+    		}
+    		return strongerRelation;
+    	}
+		
+		var circle = svg.append("svg:g").selectAll("circle")
+		    .data(force.nodes())
+		  .enter().append("svg:circle")
+		    .attr("r", "7")	
+		    .attr("id", function(d){return "#node-"+d.index})
+		    .attr("class", "normal")		    
+		    .attr("source", function(d){
+		    	return d.name;
+		    	})
+		    .attr("fill", function(d){	    	
+		    	return d.group.colorUnselected;
+		    	})
+		    .call(force.drag);
+		
+		$('circle').last().addClass('last');
+		
+		setTimeout(function(){
+            $('circle').last().removeClass('last');
+      	},2000);
+      	
+		var text = svg.append("svg:g").selectAll("g")
+		    .data(force.nodes())
+		  .enter().append("svg:g");
+		  
+	
+		
+		// A copy of the text with a thick white stroke for legibility.
+		text.append("svg:text")
+		    .attr("x", 8)
+		    .attr("y", ".31em")
+		    .attr("class", "shadow")
+		    .attr("class",function(d) { return d.name; })
+		    .text(function(d) { return d.name; });
+		
+		text.append("svg:text")
+		    .attr("x", 8)
+		    .attr("y", ".31em")
+		    .attr("class",function(d) { return d.name; })
+		    .text(function(d) { return d.name; });
+		
+		function generalPosition(d){
+			var position = "neutral";
+	    	if(d.value > 50){
+	    		position = "agree";
+	    	}
+	    	if(d.value < 50){
+	    		position = "disagree";
+	    	}
+	    	return position;
+	    }
+	    
+	    $('circle').mouseover(function() {    	
+	    	var circle = $(this);
+	    	var circleData = this.__data__;
+	    	$(this).attr('fill',circleData.group.colorSelected);
+	    	
+	    	$('circle').each(function(){
+	    		if(this.__data__.group != circleData.group){
+	    			$(this).attr("opacity", 0.2);
+	    		}
+	    	});
+
+	    	$('line').each(function(){
+	    		var link = this.__data__;
+	    		if((link.source.group != circleData.group) || (link.target.group != circleData.group)){
+	    			$(this).attr("opacity", 0.2);
+	    		} else {
+	    			$(this).attr("opacity", 1);
+	    		}
+	    	});
+
+	    	$('text').each(function(){		
+				if("#node-"+this.__data__.index == circle.attr("id")){
+					$(this).show();				
+				}
+			});
+	    });
+	    
+	    $('circle').mouseout(function() {    	
+			var circle = $(this);
+			var circleData = this.__data__;
+			
+			$('circle').each(function(){
+		    	$(this).attr("opacity", 1);
+		    });
+
+		    $('line').each(function(){
+	    		$(this).attr("opacity", 1);
+	    	});
+
+			$('text').each(function(){		
+				if("#node-"+this.__data__.index == circle.attr("id")){
+					$(this).hide();				
+				}
+			});
+			if($(this).hasClass('selected')){
+				$(this).attr('fill',this.__data__.group.colorSelected);
+			} else {
+				$(this).attr('fill',this.__data__.group.colorUnselected);
+			}		
+	    });
+	    
+	    $('circle').click(function() {    	
+		var circleId = $(this).attr('id');
+		var participant = this.__data__;
+		$('.messages-control').hide();
+		$('.title').remove();
+		$('.container-messages-details').hide();
+		$('.container-messages-details').children().remove();
+		showDetailedInformation(participant);
+		$(".ui-state-active").attr('aria-pressed','false');
+		$(".ui-state-active").removeClass('ui-state-active');
+		$(".radio-perspective").buttonset("enable") ;
+		$('circle').each(function() {
+			$(this).attr('fill',this.__data__.group.colorUnselected);
+			if($(this).hasClass('selected')){
+				$(this).removeClass('selected');
+				$(this).addClass('unselected');
+			}
+		});
+		$(this).addClass('selected');
+		$(this).attr('fill',this.__data__.group.colorSelected);
+			$('text').each(function(){		
+				if("#node-"+this.__data__.index == circleId){
+					$(this).hide();				
+				}
+			});
+	    });
+	    
+	    function showDetailedInformation(participant){
+	    	showMessagesReceived(findAllMessagesReceived(participant), participant);
+	    	showMessagesSent(findAllMessagesSent(participant), participant);
+	    	showSupportersCritics(participant);
+	    	showAllies(participant);
+	    }
+	    
+	    function showAllies(participant){
+	    	$('.up').before('<div id="title-participants-group" class="title title-participants-group">'+
+		    	'<span id=title-span-participants-group class="title-span detail">Allies of '+participant.name+'</span>'+
+		    	'</div>');
+	    	var group = participant.group;
+	    	for(var i = 0 ; i < group.nodes.length ; i++){	 
+	    		if(participant.name != group.nodes[i].name){
+	    			$('.participants-group').append('<div id=participant-group-'+i+' class=message-details>'+	    		
+		    		'<div id="container-participant-group" class="container-participant-group container-detail"><span id=name-participant-group-'+i+' class="name-participant-group detail">Name: '+group.nodes[i].name+'</span></div>'+
+		    		'</div>');
+		    	}
+	    	}
+	    }
+	    
+	    function showSupportersCritics(participant){	
+	    	$('.up').before('<div id="title-participants-agree" class="title title-participants-agree">'+
+		    	'<span id=title-span-participants-agree class="title-span detail">Supporters of '+participant.name+'</span>'+
+		    	'</div>');
+		    	
+	    	$('.up').before('<div id="title-participants-disagree" class="title title-participants-disagree">'+
+		    	'<span id=title-span-participants-disagree class="title-span detail">Critics of '+participant.name+'</span>'+
+		    	'</div>');
+		    	    	
+	    	for(var i = 0 ; i < links.length ; i++){
+	    		if((links[i].target.name == participant.name) && (links[i].value > 50)){	    				    			
+	    			$('.participants-agree').append('<div id=participant-agree-'+i+' class=message-details>'+	    		
+		    		'<div id="container-participant-agree" class="container-participant-agree container-detail"><span id=name-participant-agree-'+i+' class="name-participant-agree detail">Name: '+links[i].source.name+'</span></div>'+
+		    		'</div>');
+	    		}
+	    		
+	    		if((links[i].target.name == participant.name) && (links[i].value < 50)){	    				    			
+	    			$('.participants-disagree').append('<div id=participant-disagree-'+i+' class=message-details>'+	    		
+		    		'<div id="container-participant-disagree" class="container-participant-disagree container-detail"><span id=name-participant-disagree-'+i+' class="name-participant-disagree detail">Name: '+links[i].source.name+'</span></div>'+
+		    		'</div>');
+	    		}
+	    	}
+	    }
+	    
+	    function showMessagesSent(messagesSent, participant){
+	    	
+	    	var sender = participant.name;
+	    	$('.up').before('<div id="title-messages-sent" class="title title-messages-sent">'+
+	    		'<span id=title-span-messages-sent class="title-span detail">Messages sent by '+sender+'</span>'+
+	    		'</div>');
+		    				
+	    	if(messagesSent.length > 0){	    		
+	    		var height = $('.container-messages').height();
+		    		
+		    	for(var i = 0 ; i < messagesSent.length ; i++){
+		    		
+		    		var addressee = messagesSent[i].addressee;
+		    		var content = messagesSent[i].content;
+		    		var date = messagesSent[i].data;
+		    		var position = messagesSent[i].position;
+		    		
+		    		$('.messages-sent').append('<div id=message-'+i+' class=message-details>'+	    		
+		    		'<div id="container-addressee" class="container-sender container-detail"><span id=addressee-'+i+' class="addressee detail">Addressee: '+addressee+'</span></div>'+
+		    		'<div id="container-date" class="container-date container-detail"><span id=date-'+i+' class="date detail">Date: '+date+'</span></div>'+
+		    		'<div id="container-content" class="container-content container-detail"><span id=content-'+i+' class="content detail">Content: '+content+'</span></div>'+
+		    		'<div id="container-position" class="container-position container-detail"><span id=position-'+i+' class="position-'+position+' detail">Position: '+position+'</span></div>'+
+		    		'</div>');
+		    	}		    	
+		    }
+	    }
+	    
+	    function showMessagesReceived(messagesReceived, participant){
+	    	var addressee = participant.name;
+	    	
+	    	$('.up').before('<div id="title-messages-received" class="title title-messages-received">'+
+		    	'<span id=title-span-messages-received class="title-span detail">Messages received by '+addressee+'</span>'+
+		    	'</div>');
+		    	
+	    	if(messagesReceived.length > 0){	    		
+	    		var height = $('.container-messages').height();
+		    	
+		    	for(var i = 0 ; i < messagesReceived.length ; i++){
+		    		
+		    		var sender = messagesReceived[i].sender;
+		    		var content = messagesReceived[i].content;
+		    		var date = messagesReceived[i].data;
+		    		var position = messagesReceived[i].position;
+		    		
+		    		$('.messages-received').append('<div id=message-'+i+' class=message-details>'+	    		
+		    		'<div id="container-sender" class="container-sender container-detail"><span id=sender-'+i+' class="sender detail">Sender: '+sender+'</span></div>'+
+		    		'<div id="container-date" class="container-date container-detail"><span id=date-'+i+' class="date detail">Date: '+date+'</span></div>'+
+		    		'<div id="container-content" class="container-content container-detail"><span id=content-'+i+' class="content detail">Content: '+content+'</span></div>'+
+		    		'<div id="container-position" class="container-position container-detail"><span id=position-'+i+' class="position-'+position+' detail">Position: '+position+'</span></div>'+
+		    		'</div>');
+		    	}		    	
+		    }
+	    }
+	    
+	    $('.down').click(function(){
+	    	$('.container-messages-details').each(function(){
+	    		if($(this).css('display') == 'block'){
+	    			var id = $(this).attr('id');
+	    			$('#'+id+ ' .message-details:first-child' ).animate({	    			
+	    				marginTop: '-=20'
+	    			},20);
+	    		}
+	    	});
+	    });
+	    
+	    $('.down').dblclick(function(){
+	    	$('.container-messages-details').each(function(){
+	    		if($(this).css('display') == 'block'){
+	    			var id = $(this).attr('id');
+	    			$('#'+id+ ' .message-details:first-child' ).animate({	    			
+	    				marginTop: '-=50'
+	    			},20);
+	    		}
+	    	});
+	    });
+	    
+	    $('.up').click(function(){
+	    	$('.container-messages-details').each(function(){
+	    		if($(this).css('display') == 'block'){
+	    			var id = $(this).attr('id');
+	    			$('#'+id+ ' .message-details:first-child' ).animate({	    			
+	    				marginTop: '+=20'
+	    			},20);
+	    		}
+	    	});
+	    });
+	    
+	    $('.up').dblclick(function(){
+	    	$('.container-messages-details').each(function(){
+	    		if($(this).css('display') == 'block'){
+	    			var id = $(this).attr('id');
+	    			$('#'+id+ ' .message-details:first-child' ).animate({	    			
+	    				marginTop: '+=50'
+	    			},20);
+	    		}
+	    	});
+	    });
+	    
+	    function findAllMessagesSent(participant){
+	    	var name = participant.name;
+	    	var participantMessages = [];
+	    	for(var i = 0 ; i < messages.length ; i++){
+	    		if(name == messages[i].sender){
+	    			participantMessages.push(messages[i]);
+	    		}
+	    	}
+	    	return participantMessages;
+	    }
+	    
+	    function findAllMessagesReceived(participant){
+	    	var name = participant.name;
+	    	var participantMessages = [];
+	    	for(var i = 0 ; i < messages.length ; i++){
+	    		if((name == messages[i].addressee) && (name != messages[i].sender)){
+	    			participantMessages.push(messages[i]);
+	    		}
+	    	}
+	    	return participantMessages;
+	    }
+	    
+	    function smartPathEnd(d,r){  
+	    	if((d.source.x > d.target.x) && (d.source.y > d.target.y)){
+	    		d.target.newX = d.target.x;
+	    		d.target.newY = d.target.y + r;
+	    	}
+	    	
+	    	if((d.source.x > d.target.x) && (d.source.y < d.target.y)){
+	    		d.target.newX = d.target.x + r;
+	    		d.target.newY = d.target.y;
+	    	}
+	    	
+	    	if((d.source.x < d.target.x) && (d.source.y < d.target.y)){
+	    		d.target.newX = d.target.x;
+	    		d.target.newY = d.target.y - r;
+	    	}
+	    	
+	    	if((d.source.x < d.target.x) && (d.source.y > d.target.y)){
+	    		d.target.newX = d.target.x - r;
+	    		d.target.newY = d.target.y;
+	    	}
+	    }
+	    
+	    	
+		// Use elliptical arc path segments to doubly-encode directionality.
+		function tick() {	
+			
+		path.attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
+		  
+		  circle.attr("cx", function(d) { return d.x = Math.max(6, Math.min(w - 6, d.x)); })
+        .attr("cy", function(d) { return d.y = Math.max(6, Math.min(h - 6, d.y)); });
+		
+		  text.attr("transform", function(d) {
+		    return "translate(" + d.x + "," + d.y + ")";
+		  });
+		  lastNodes = nodes;
+		}
+		$('svg').show();
+	}
+	
+	 $(".radio-perspective").click(function () {
+	 	$(this).children('input').each(function () { 
+	 		if($(this).attr('checked')){
+	 			var selectedRadioId = $(this).attr('id');
+	 			var detailsArea = selectedRadioId.slice(6);
+	 			$('.container-messages-details').hide();
+	 			$('.title').hide();
+	 			$('.messages-control').show();
+	 			$('.title-'+detailsArea).show();
+	 			$('.'+detailsArea).show();
+	 		}
+	 	});
+	 });
+
+	var nowMessages = [];
+	var filteredMessages = [];
+    var messagesCount = 0;
+	var topicSelected = $(".select-topic option:selected").text();
+	populateFilteredMessages();
+	console.log(topicSelected);
+	$(".select-topic").change(function() {
+		filteredMessages = [];
+		topicSelected = $(".select-topic option:selected").text();
+		messagesCount = 0;
+		nowMessages = [];
+		$("svg").remove();
+		populateFilteredMessages();
+		console.log(topicSelected);
+	});
+	    
+    function populateFilteredMessages(){
+    	var nextMessage;
+    	for(var i = 0 ; i < allMessages.length ; i++){
+    		nextMessage = allMessages[i];
+    		for(var j = 0 ; j < nextMessage.topics.length ; j++){
+    			if(topicSelected == "all"){
+    				filteredMessages.push(nextMessage);
+    			} else if(nextMessage.topics[j] == topicSelected){
+    				filteredMessages.push(nextMessage);
+				}
+    		}
+    	}
+
+    }
+
+    $(".next-message").click(function() {   
+    	var nextMessage = filteredMessages[messagesCount];	
+		nowMessages.push(nextMessage);
+		console.log(filteredMessages);
+		console.log(nowMessages);
+		messagesCount++;
+		draw(nowMessages);
+		$(".radio-perspective").buttonset("disable") ;
+	});
+	
+	function findNextMessage(messageFound){
+	}
+	
+	$(".previous-message").click(function() {		
+		nowMessages.pop();
+		messagesCount--;
+		draw(nowMessages);
+		$(".radio-perspective").buttonset("disable");
+	});
+
+	$(".latest-message").click(function() {		
+    	var nextMessage;
+    	for(var i = 0 ; i < allMessages.length ; i++){
+    		nextMessage = allMessages[i];
+    		for(var j = 0 ; j < nextMessage.topics.length ; j++){
+    			if(topicSelected == "all"){
+    				nowMessages.push(nextMessage);
+					messagesCount++;
+    			} else if(nextMessage.topics[j] == topicSelected){
+    				nowMessages.push(nextMessage);
+					messagesCount++;
+				}
+    		}
+    	}
+		draw(nowMessages);
+		$(".radio-perspective").buttonset("disable") ;
+	});
+
+	$(".first-message").click(function() {
+		messagesCount = 0;
+		nowMessages = [];
+		nowMessages.push(allMessages[messagesCount]);
+		draw(nowMessages);
+		messagesCount++;
+		$(".radio-perspective").buttonset("disable") ;
+	});
+}

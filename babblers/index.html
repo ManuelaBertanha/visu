@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Participação</title>
+		<meta name="description" content="" />
+		<meta name="generator" content="Studio 3 http://aptana.com/" />
+		<meta name="author" content="Rafael" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+		<script type="text/javascript">
+
+// --------------------------------------------
+// Clockbar
+// --------------------------------------------
+
+var clockBar; // desenha uma barra de progresso enquanto as mensagens est�o sendo carregadas do servidor
+</script>
+		<script language="javascript" type='text/javascript' src="js/interfaceFunctions/jquery.min.js"> </script>
+		<script language="javascript" type='text/javascript' src="../geral/js/globalVariables.js"> </script>
+		<script language="javascript" type='text/javascript' src="../geral/js/generalController.js"> </script>
+		<script language="javascript" type='text/javascript' src="../geral/js/jquery.cookie.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/interfaceFunctions/geral.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/BubbleClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/MensagemClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/BubbleChartMessageClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/BubbleMessageClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/AxisDivisionClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/MessagesListClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/UserClass.js"> </script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/ClockBarClass.js"></script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/BubbleChartClass.js"></script>
+		<script language="javascript" type='text/javascript' src="js/package.classes.js/UsersListClass.js"></script>
+		<script language="javascript" type='text/javascript' src="js/package.controle.js/ControladorVisu.js"></script>
+		<script language="javascript" type='text/javascript' src="js/package.facade.js/FacadeControladorVisu.js"></script>
+		<script language="javascript" type='text/javascript' src="js/package.servicos.js/servicosControladorVisu.js"></script>
+		<script language="javascript" type='text/javascript' src="js/package.utils.js/javascript.js"></script>
+		<script language="javascript" type='text/javascript' src="js/vo/ReturnMessagesUsers.js"></script>
+		<script type="text/javascript" src="js/interfaceFunctions/jquery.storage.js"></script>
+		<script type="text/javascript" src="js/interfaceFunctions/jquery.tour.js"></script>
+		<script type="text/javascript" src="js/interfaceFunctions/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/interfaceFunctions/tour.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../geral/css/geral.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.jquerytour.css" />
+	</head>
+
+	<body> 
+
+
+<!-- HTML Code -->
+<img src="../images/visuLogo.png" alt="Logomarca do Visu" />
+<div id="divContainer">
+<div id="divMenu"> 
+<ul class="menu">
+    <li class="group import-discussion"><a href="#import-discussion">Importar discussão</a></li>
+    <li class="group visualisations"><a href="#visualisations">Visualizações</a>    	
+    	<li id="visualisations-babblers" class="group group-visualisations visualisations-babblers"><a href="#visualisations-babblers">Participação</a></li>
+		<li id="visualisations-popularity" class="group group-visualisations visualisations-popularity"><a href="#visualisations-popularity">Popularidade</a></li>
+    	<li id="visualisations-alliance" class="group group-visualisations visualisations-alliance"><a href="#visualisations-alliance">Alianças e confrontos</a></li>
+    	<li id="visualisations-polemic" class="group group-visualisations visualisations-polemic"><a href="#visualisations-polemic">Polêmicas</a></li>	    
+    </li>
+    <li class="group about"><a href="#about">Sobre Visu</a></li>
+    <li class="group tutorial"><a href="#tutorial">Tutorial</a></li>     
+  </ul>
+  
+</div>
+<div id="divConteudo">
+	<!-- Home Section-->
+	<!-- About Visu Section-->
+	<!-- Visualizations Section-->
+	<div id="divCanvasTitleBabblers">
+	
+	</div>
+	<span id="canvasTitleBabblers" class="visu-title">Visualização de participação: Apresenta os participantes e seus níveis de participação.</span>
+	<div id="divCanvas">
+		
+	    <canvas id="canvas" width="300" height="400"></canvas> 	
+		<div id="legenda-babblers" class="legenda"><img src="../images/legenda-babblers.png" alt="Legenda participação" /></div>
+	</div>
+	
+	<!-- Fim: Visualizations Section-->
+	<div id="messagesList">
+		<p id="reportParagraph">&lt;Relatório&gt;</p>
+	</div>
+</div>
+</div>
+</body> 
+</html> 
