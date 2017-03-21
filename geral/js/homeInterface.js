@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     $('.image-alliance').click(function(){		
 		localStorage.setItem('storedDiscussion',$('#textDiscussion').val());
-	    location.href = '/allianceNetwork/index.html';
+	    location.href = 'allianceNetwork/index.html';
 	    $('.arrow').hide();
 		$('.images').hide();
     });
